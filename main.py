@@ -15,7 +15,6 @@ async def post():
 async def put():
     return {"message": "This is a PUT request."}
 
-
 @app.get("/items")
 async def list_items():
     return {"message": "This is a list of items."}

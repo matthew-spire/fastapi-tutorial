@@ -38,6 +38,14 @@ async def get_item(item_id: int, sample_query_param: str, q: str | None = None, 
     # return {"item_id": item_id}
     return item
 
+@app.get("/items")
+async def list_items():
+    return {"message": "This is a list of items."}
+
+@app.get("/items/{item_id}")
+async def get_item(item_id: int):
+    return {"item_id": item_id}
+
 @app.get("/users")
 async def list_users():
     return {"message": "This is a list of users."}
